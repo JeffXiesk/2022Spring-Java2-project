@@ -1,35 +1,32 @@
 <template>
   <div id="backcont">
-    <div id="nav">
-      <p>
-        <router-link to="/">Home</router-link>
-      </p>
-      <p>
-        <router-link to="/about">About</router-link>
-      </p>
-    </div>
+  <header>
+    <h1>Java2 Final Project</h1>
+  </header>
     <router-view/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import {provide} from 'vue'
+import * as echarts from 'echarts'
+import axios from "axios";
 
+axios.defaults.baseURL = 'http://localhost:8181'
 export default {
-  name: 'app',
+  setup(){
+    provide('echarts',echarts)
+  },
   components: {
-    HelloWorld
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 </style>

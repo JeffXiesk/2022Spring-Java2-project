@@ -5,9 +5,10 @@ import router from './router'
 import store from './store'
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
+import 'lib-flexible/flexible'
+import * as echarts from 'echarts'
 
-// 全局引入css
 import '../style/headtap.css'
 
 const app = createApp(App);
-app.use(store).use(axios).use(ElementPlus).use(router).mount('#app')
+app.use(store).use(axios).use(ElementPlus).use(echarts).use(router).mount('#app')
