@@ -67,10 +67,10 @@ export default {
           left: 'center',
           top: 'center',
           width: '70%',
-          height: '90%',
+          height: '70%',
           right: null,
           bottom: null,
-          sizeRange: [15, 60],
+          sizeRange: [12, 50],
           rotationRange: [-90, 90],
           rotationStep: 45,
           gridSize: 15,
@@ -105,8 +105,8 @@ export default {
 <!-- Add 'scoped' attribute to limit CSS to this component only -->
 <style scoped>
 .echarts {
-  width: 1000px;
-  height: 1000px;
+  width: auto;
+  height: auto;
   margin: 10px;
 }
 
